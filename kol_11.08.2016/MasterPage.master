@@ -1,0 +1,330 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+        <title>Lütfi Kol</title>
+   
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+   
+    <script type="text/javascript">        /* menü hover özellikleri*/
+        $("document").ready(function () {
+            $("header nav ul li.organizasyon_wrap").mouseover(function () {
+
+                $("header nav ul li.organizasyon_wrap .organizasyon").css("display", "block")
+            })
+            $("header nav ul li.organizasyon_wrap").mouseleave(function () {
+
+                $("header nav ul li.organizasyon_wrap .organizasyon").css("display", "none")
+            })
+            $("header nav ul li.galeri_wrap").mouseover(function () {
+
+                $("header nav ul li.galeri_wrap .galeri").css("display", "block")
+            })
+            $("header nav ul li.galeri_wrap").mouseleave(function () {
+
+                $("header nav ul li.galeri_wrap .galeri").css("display", "none")
+            })
+        })
+    </script>
+
+
+
+      <script> /* resim slider 5 saniye */
+          var allImages;
+          var imgCount;
+          var current = 0;
+
+          $(document).ready(function ($) {
+              allImages = $(".slideWrapper img");
+              imgCount = allImages.length;
+
+              setInterval(slide, 5000);
+          });
+
+          function slide() {
+
+              if (current == (imgCount - 1)) {
+
+                  allImages.fadeOut(1000).eq(0).fadeIn(1000);
+                  current = 0;
+              }
+              else {
+                  current++;
+                  allImages.fadeOut(1000).eq(current).fadeIn(1000);
+              }
+          }
+
+
+    </script>
+ 
+    <link href="StyleSheet.css" rel="stylesheet" />
+
+</head>
+<body>
+       
+    <form id="form1" runat="server">
+  
+      <div class="baslik" >
+           
+        <table >
+       
+        <tr >
+        <td style="padding-top:20px;">
+         <asp:Label ID="Label1"  style="margin-left:650px; color:white"  runat="server" Text="L&nbsp;ü&nbsp;t&nbsp;f&nbsp;i&nbsp;&nbsp;K&nbsp;o&nbsp;l"></asp:Label>
+            
+        </td> 
+            
+           
+        
+          <td style="padding-top:20px;">   
+              
+         <asp:Label ID="Label2" style="font-size:medium; float:left; margin-top:15px;color:white" runat="server" Text="&nbsp;Resmi Web Sitesi"></asp:Label>
+       
+        </td>
+                
+            </tr>
+       
+        </table>
+            
+        </div>
+
+
+         
+    <div class="header">
+        <table>
+            <tr>
+                <td >
+                     <asp:Image ID="Logo"  style="margin-left:100px;" ImageUrl="~/images/kol_logo.png"   runat="server" Width="80px" Height="80px"  />
+                </td>
+               
+                <td >
+                   <header >           
+               <nav>
+                <ul style="background-color:yellow">
+                    <li style="margin-left:25px; ">
+                       <a href="Anasayfa.aspx" style="background:url(images/sekme_sol_resim.gif) no-repeat left top;padding-top:0.4em;padding-left:0.4em;"> Anasayfa</a>
+                        </li>
+                     <li style="margin-left:25px;" >
+                       <a href="Biyografi.aspx" style="background:url(images/sekme_sol_resim.gif) no-repeat left top;padding-top:0.4em;padding-left:0.4em;"> Biyografi 
+                         
+                         </a> 
+                        </li>
+                     <li style="margin-left:25px;"  class="organizasyon_wrap" >
+                       <a href="Anasayfa.aspx"  style="background:url(images/sekme_sol_resim.gif) no-repeat left top;padding-top:0.4em;padding-left:0.4em;"> Organizasyonlar</a> 
+                         <div class="organizasyon">
+                             <ul>
+                                 <li >
+                                     <a href="Anasayfa.aspx"   > Düğün</a> 
+                                 </li>        
+                                   <li>
+                                    <a href="Anasayfa.aspx">  Fasıl</a> 
+                                 </li>                          
+                                  <li>
+                                    <a href="Anasayfa.aspx"> Kokteyl</a> 
+                                 </li>
+                                   <li>
+                                       <a href="Anasayfa.aspx"> Açılış</a>
+                                 </li>
+                               
+                                  <li>
+                                       <a href="Anasayfa.aspx"> Tasavvuf </a>
+                                 </li>
+                                 
+                             </ul>
+                         </div>
+                        </li>
+                     <li style="margin-left:25px;">
+                                    <a href="Anasayfa.aspx"style="background:url(images/sekme_sol_resim.gif) no-repeat left top;padding-top:0.4em;padding-left:0.4em;"> Call Band</a> 
+                                 </li>  
+                     <li style="margin-left:25px;" class="galeri_wrap" >
+                       <a href="Anasayfa.aspx" style="background:url(images/sekme_sol_resim.gif) no-repeat left top;padding-top:0.4em;padding-left:0.4em;"> Galeri</a> 
+                          <div class="galeri">
+                             <ul>
+                                 <li>
+                                     <a href="Anasayfa.aspx"> Fotoğraflar</a> 
+                                 </li>
+                                  <li>
+                                    <a href="Anasayfa.aspx"> Videolar</a> 
+                                 </li>
+                                  </ul>
+                         </div>
+                        </li>   
+                    
+                              <li style="margin-left:25px;">
+                                    <a href="Anasayfa.aspx" style="background:url(images/sekme_sol_resim.gif) no-repeat left top;padding-top:0.4em;padding-left:0.4em;"> Referanslar</a> 
+                                 </li> 
+                      <li style="margin-left:25px;">
+                                    <a href="Anasayfa.aspx" style="background:url(images/sekme_sol_resim.gif) no-repeat left top;padding-top:0.4em;padding-left:0.4em;"> Basında</a> 
+                                 </li>       
+                             <li style="margin-left:25px;">
+                                    <a href="Anasayfa.aspx" style="background:url(images/sekme_sol_resim.gif) no-repeat left top;padding-top:0.4em;padding-left:0.4em;"> İletişim</a> 
+                                 </li>
+                                
+                                 
+                                  <li style="float:left;  background-color:Green; margin-left:5px;visibility:hidden; ">
+  
+                                     <a href="Anasayfa.aspx" style="background:url(images/sekme_sol_resim.gif) no-repeat left top;padding-top:0.4em; padding-left:0.3em; color:red;"> Admin</a> 
+                                 </li> 
+                                
+                               
+ 
+                            
+                         
+                    <li  style="background:none;margin-left:5px;" >
+                       
+                           <asp:ImageButton ID="facebook_img"   ImageAlign="TextTop"  ImageUrl="~/images/fbhover.jpg" Width="22px" Height="22px" ToolTip="Facebook" runat="server"  OnClick="facebook_Click" OnClientClick="form1.target='_blank';" />
+                    </li>                                                         
+                 
+                     <li style="background:none" >
+                    <asp:ImageButton ID="instagram_img"  ImageUrl="~/images/instahover.png" ImageAlign="TextTop" Width="17px" Height="22px" ToolTip="Instagram" runat="server" OnClick="instagram_Click" OnClientClick="form1.target='_blank';" />
+                          </li>   
+
+                          <li  style="background:none" >
+                               <asp:ImageButton ID="youtube_img" ImageUrl="~/images/youtubehover.png" ImageAlign="TextTop" Width="21px" Height="25px" ToolTip="Youtube" runat="server" OnClick="youtube_Click" OnClientClick="form1.target='_blank';"/>
+                               </li> 
+                                
+                                    
+                    
+                </ul>
+               </nav>
+            </header>
+                </td>
+            </tr>            
+        </table>
+     </div>
+          
+          
+           
+               
+        
+
+        <div class="ortabolum">
+       
+                <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+    
+         
+        </asp:contentplaceholder>
+       
+       
+          
+        
+        </div>
+      
+
+
+        <div class="header2">
+             <table >
+                <tr >
+                 <td > 
+                     Ek Hizmetlerimiz
+                 </td>
+                    </tr>
+                    </table>
+        </div>
+
+        <div class="hizmet">
+           
+                           <table style="font-size:large;font-family:'Times New Roman';font-style:italic">                  
+                <tr>
+                    
+
+                    <td >
+                        <asp:Image ID="keman_foto" ImageUrl="~/images/violin.jpg"  Width="60px" Height="60px"  runat="server" />                                                 
+                    </td>
+                      <td style="width:120px;height:90px">
+                               <a href="Anasayfa.aspx"  style="padding-left:10px;margin-top:50px"> Keman <br /> &nbsp Dersi</a>
+                           </td> 
+
+                      <td >
+                        <asp:Image ID="klarnet_foto" ImageUrl="~/images/klarnet.jpg" style="margin-left:20px" Width="60px" Height="60px"  runat="server" />                                                 
+                    </td>        
+                     <td style="width:120px;height:90px" >
+                               <a href="Anasayfa.aspx" style="padding-left:10px;margin-top:50px"> Klarnet <br /> &nbsp Dersi</a>
+                           </td>  
+
+                       
+
+                      <td >
+                        <asp:Image ID="piano_foto" ImageUrl="~/images/piano.jpg" style="margin-left:20px" Width="60px" Height="60px"  runat="server" />                                                 
+                    </td>
+                      <td style="width:120px;height:90px">
+                               <a href="Anasayfa.aspx" style="padding-left:10px;margin-top:50px"> Piano <br /> &nbsp Dersi</a>
+                           </td> 
+                      <td>
+                        <asp:Image ID="gitar_foto" ImageUrl="~/images/gitar.jpg" style="margin-left:20px" Width="60px" Height="60px"  runat="server" />                                                 
+                    </td>        
+                     <td style="width:120px;height:90px">
+                               <a href="Anasayfa.aspx" style="padding-left:10px;"> Gitar <br /> &nbsp Dersi</a>
+                           </td>   
+
+
+                                
+
+
+                                    <td >
+                        <asp:Image ID="basgitar_foto" ImageUrl="~/images/basgitar.jpg" Width="60px" Height="60px" style="margin-left:20px"    runat="server" />                                                 
+                    </td>
+                      <td style="width:120px;height:90px">
+                               <a href="Anasayfa.aspx" style="padding-left:10px;"> Bas Gitar <br /> &nbsp Dersi</a>
+                           </td> 
+
+
+                                    <td >
+                        <asp:Image ID="bateri_foto" ImageUrl="~/images/bateri.jpg" style="margin-left:20px"  Width="60px" Height="60px"  runat="server" />                                                 
+                    </td>
+                      <td style="width:120px;height:90px">
+                               <a href="Anasayfa.aspx" style="padding-left:10px;"> Bateri <br /> &nbsp Dersi</a>
+                           </td> 
+
+                                    <td >
+                        <asp:Image ID="darbuka_foto" ImageUrl="~/images/darbuka.png" style="margin-left:20px"  Width="60px" Height="60px"  runat="server" />                                                 
+                    </td>
+                      <td style="width:120px;height:90px">
+                               <a href="Anasayfa.aspx" style="padding-left:10px;"> Darbuka <br /> &nbsp Dersi</a>
+                           </td> 
+
+                         <td>
+                        <asp:Image ID="san_foto" ImageUrl="~/images/san.jpg" style="margin-left:20px"  Width="60px" Height="60px"  runat="server" />                                                 
+                    </td>        
+                     <td style="width:120px;height:90px">
+                               <a href="Anasayfa.aspx" style="padding-left:10px;"> Şan/Solfej <br /> &nbsp Dersi</a>
+                           </td>   
+
+                        <td >
+                        <asp:Image ID="ud_foto" ImageUrl="~/images/ud.jpg" Width="60px" Height="60px" style="margin-left:20px"    runat="server" />                                                 
+                    </td>
+                      <td style="width:120px;height:90px">
+                               <a href="Anasayfa.aspx" style="padding-left:10px;"> Ud <br /> &nbsp Dersi</a>
+                           </td> 
+                                                   
+                    </tr>
+                                 </table>
+           
+        </div>
+
+
+
+
+        
+                
+           <div class="footer" >
+              
+                <table>
+                   <tr>
+                       <td style="width:100%">
+                           <asp:Label ID="Label3"   runat="server" Text="  Copyright @ 2016 &nbsp;&nbsp;&nbsp;&nbsp; Seyhun Yaşar Özkal&nbsp; |&nbsp; Tüm Hakları Saklıdır."></asp:Label>
+                          
+                       </td>
+                   </tr>
+               </table>
+               
+               </div> 
+   
+        
+ 
+    </form>
+</body>
+</html>

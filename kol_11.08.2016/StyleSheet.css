@@ -1,0 +1,200 @@
+﻿body {
+    background-color:#DCDCDC;
+    /*#DCDCDC*/
+}
+*{
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+.header{
+    float:left;
+    width:100%;         
+   background-color:white;
+}
+a{
+    text-decoration:none;
+    font-weight:bold;
+    color:black;
+   
+}
+
+a:hover{ 
+    color:#778899; 
+   
+}
+.degis
+{
+    
+        background:url("images/fb_icon.png") no-repeat scroll 0 0 transparent;
+ 
+}
+.degis:hover
+{        
+      background:url("images/fbhover.png") no-repeat scroll 0 0 transparent;
+  
+}
+  .header ul li.organizasyon_wrap .organizasyon :hover
+    {   
+     
+    }
+
+
+.header ul
+ {   
+     list-style:none;
+     background-color:#f1f1f1;
+      
+     
+ }
+  .header ul li{
+    float:left;   
+    
+   background: url(images/sekme_sag_resim.gif) no-repeat top right;/*sekmelerin görünümü sağ orta ve sağ taraf*/
+   padding-top:0.4em;
+    padding-right:0.4em;
+      
+  font-family:'Monotype Corsiva'; 
+    font-size:x-large;
+  
+}
+    .header ul li.organizasyon_wrap
+    {
+        position:relative;
+       
+    }
+     .header ul li.organizasyon_wrap .organizasyon
+    {   
+        display:none;
+        position:absolute;
+        margin-left:18px;
+        
+       width:100px;
+     background-color:none;
+     padding-left:1em;
+    
+          /*#778899*/    
+          
+                
+    }
+      .header ul li.galeri_wrap
+    {
+        position:relative;       
+}
+     .header ul li.galeri_wrap .galeri
+    {
+        display:none;
+        position:absolute;
+      padding-left:0.4em;
+       
+        margin-left:-25px;
+        width:120px;        
+          background-color:white;         
+    }
+   
+.ortabolum{
+    width:1200px;
+    height:480px;
+      margin:auto; 
+       margin-top:40px;
+}
+.slideWrapper {
+     
+            position: relative; /*içinde bulunan resimlerin pozisyonlarını bu div'den alması için position:relative yapıyoruz.*/          
+            
+    height:50px; 
+}
+ 
+.slideWrapper img { /*İçerideki resimleri serbest moda geçirip bulunduğu div'in sol üst köşesine alıp gizliyoruz.*/
+            position: absolute;            
+            width:800px;
+            height:500px;
+            display: none;
+         }
+ 
+.slideWrapper img:nth-child(1) { /*nth-child ile resimlerden ilkini görünür yapıyoruz.*/
+                    display: block;
+          }
+.baslik{  
+   
+ 
+    height:80px;
+    background-color:black;  
+    font-family:'Times New Roman', Times, serif;
+    font-size:x-large;
+    font-weight:bolder;
+    font-style:italic;
+   
+}
+
+.duyuru{
+  
+  
+    float:left;
+    width:200px;
+    height:300px;
+    font-style:italic;
+    
+    background-color:#808080;
+  
+}
+.duyuru_tarih
+{
+    float:right;
+    font-size:small;
+    font-weight:bold;
+}
+.degisen_alan{
+    float:left;
+    position:relative; /*top left 0 demek*/
+   margin-left:50px;
+    width:800px;
+    height:500px;
+    background-color:darkcyan;
+    
+}
+
+
+.header2{
+     width:100%;
+    
+      background-color:white;
+      font-family:'Monotype Corsiva';
+      font-size:x-large;
+      font-weight:bold;
+      line-height:20px;
+      margin-top:160px;
+ }
+
+.hizmet{
+  
+   
+  
+   margin-left:90px;
+    font-weight:bold;
+    font-size:x-large;
+    font-family:'Monotype Corsiva'; 
+  
+}
+
+
+.footer{
+     position: relative;
+    
+    
+      
+    
+    font-family:'Times New Roman', Times, serif;
+    font-size:small;
+    font-weight:bold;
+  
+ 
+   margin-top:10px;
+    line-height:50px;
+    background-color:#d5d5d5;
+    top: 0px;
+    left: 0px;
+    width: 1538px;
+}
+
